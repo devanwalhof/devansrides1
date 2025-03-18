@@ -53,6 +53,12 @@ CREATE TABLE IF NOT EXISTS vehicle_inquiries (
 
 conn.commit()
 
+
+
+# Sidebar Navigation
+st.sidebar.image("christisking.png", width=225)
+st.sidebar.title("Navigation")
+section = st.sidebar.radio("Go to:", ["Home","Rebuild Tutorial", "Vehicle Inquiry", "Vehicle Evaluation", "Parts Management", "Inventory & Accounting"])
 # Clear all entries from the databases
 if st.sidebar.button("Clear All Database Entries"):
     cursor.execute("DELETE FROM parts")
@@ -60,30 +66,14 @@ if st.sidebar.button("Clear All Database Entries"):
     cursor.execute("DELETE FROM vehicle_inquiries")
     conn.commit()
     st.sidebar.success("All entries have been cleared from the databases!")
-
-# Title and Introduction
-st.title("Devan's Rides: Rebuilt Vehicle Manager")
-st.write("""
-Welcome! This dashboard is designed to help streamline vehicle evaluation, 
-parts searching, inventory management, and financial tracking, all while keeping Christ at the center.
-""")
-
-
-st.image("christisking.png", width=300)
-# Conditional display based on the selected page
-
-
-
-
-# Sidebar Navigation
-st.sidebar.title("Navigation")
-section = st.sidebar.radio("Go to:", ["Home", "Vehicle Inquiry", "Vehicle Evaluation", "Parts Management", "Inventory & Accounting"])
-
 # Section: Home
 if section == "Home":
-    st.header("Welcome to Devan's Rides")
+    # Title and Introduction
+    st.title("Devan's Rides: Rebuilt Vehicle Manager")
+
     st.write("""
-    Devan's Rides is committed to providing quality used vehicles at affordable prices while sharing the love of Christ.
+    Welcome! This dashboard is designed to help streamline vehicle evaluation, 
+    parts searching, inventory management, and financial tracking, all while keeping Christ at the center. Devan's Rides is committed to providing quality used vehicles at affordable prices while sharing the love of Christ.
     """)
 
     # Displaying images side by side only on the home page
@@ -97,6 +87,41 @@ if section == "Home":
 
     with col3:
         st.image("silverado.jpg", width=300)
+
+# Section: Rebuild Tutorial
+if section == "Rebuild Tutorial":
+
+    st.header("Rebuild Your Dream Vehicle with Devan's Rides")
+
+    st.write("""
+    Rebuilding vehicles involves several different steps:
+    - Finding a great vehicle
+    - Winning the auction
+    - Getting the vehicle to your shop
+    - Finding parts 
+    - Rebuilding the vehicle
+    - Inspections and Titling
+    At Devan's Rides, we'd love to help guide you through this process. We have several 
+    different packages available for people of all experience levels. 
+    
+    Bronze Package ($300)
+    - Bid through our dealership at auctions sites around the U.S. 
+    - Only charged for successful bids
+    - Salvage Certificate issued in your name
+    
+    Silver Package ($1150)
+    - Bid through our dealership at auctions sites around the U.S. 
+    - We help you through the entire process
+       - Picking up the vehicle
+       - Sourcing parts
+       - Mechanical tips
+       - Inspection and Titling
+       - Selling the vehicle (if desired)
+    
+    Gold Package (
+    
+    
+    """)
 
 # Section: Vehicle Inquiry
 if section == "Vehicle Inquiry":
@@ -336,6 +361,7 @@ if section == "Inventory & Accounting":
 
 # Footer
 st.write("---")
+
 st.write("Rebuilding Vehicles since 2021")
 
 
