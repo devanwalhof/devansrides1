@@ -72,8 +72,8 @@ if section == "Home":
     st.title("Devan's Rides: Rebuilt Vehicle Manager")
 
     st.write("""
-    Welcome! This dashboard is designed to help streamline vehicle evaluation, 
-    parts searching, inventory management, and financial tracking, all while keeping Christ at the center. Devan's Rides is committed to providing quality used vehicles at affordable prices while sharing the love of Christ.
+    Welcome! This website is designed to help streamline vehicle evaluation, 
+    parts searching, inventory management, and financial tracking. Devan's Rides is committed to providing quality used vehicles at affordable prices while sharing the love of Christ.
     """)
 
     # Displaying images side by side only on the home page
@@ -100,26 +100,30 @@ if section == "Rebuild Tutorial":
     - Getting the vehicle to your shop
     - Finding parts 
     - Rebuilding the vehicle
-    - Inspections and Titling
+    - Inspections and titling
+    
     At Devan's Rides, we'd love to help guide you through this process. We have several 
     different packages available for people of all experience levels. 
     
-    Bronze Package ($300)
+    Broker Package ($300)
     - Bid through our dealership at auctions sites around the U.S. 
     - Only charged for successful bids
     - Salvage Certificate issued in your name
     
-    Silver Package ($1150)
+    Tutorial Package ($1150)
     - Bid through our dealership at auctions sites around the U.S. 
-    - We help you through the entire process
+    - We help the customer through the entire process
        - Picking up the vehicle
        - Sourcing parts
        - Mechanical tips
        - Inspection and Titling
        - Selling the vehicle (if desired)
     
-    Gold Package (
-    
+    Full Rebuild Package (Price varies)
+    - Customer picks a car from an auction and we rebuild it
+    - Customer sets a budget and we handle the rest
+    - Optional exhaust, suspension, paint, and wheel upgrades available
+    - Customer purchases the vehicle for the budget price once it's rebuilt
     
     """)
 
